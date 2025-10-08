@@ -243,3 +243,67 @@ header.navdiv {
   margin: 0;
   padding: 0;
 }
+/* ===== remove.bg–style navbar ===== */
+/* Clean white navbar aligned left */
+.gme-navbar.left {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* everything on left */
+  gap: 40px; /* spacing between logo and links */
+  padding: 0 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  gap: 50px; /* adds breathing space between logo and links */
+  padding: 0 50px;
+}
+
+/* Logo styling */
+.gme-brand img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+/* Navigation links */
+.gme-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.gme-nav__links a {
+  position: relative;
+  text-decoration: none;
+  color: #1f2d3d; /* dark text */
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px; /* rounded hover background */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect: background + text color */
+.gme-nav__links a:hover {
+  color: #1E73BE; /* GME blue text */
+  background-color: rgba(30, 115, 190, 0.1); /* soft blue background */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(30, 115, 190, 0.15);
+}
+
+
+/* Active page: only blue text, no background */
+.gme-nav__links a[aria-current="page"] {
+  color: #1E73BE;
+  background: none;
+}
+.gme-brand img {
+  height: 40px;     /* increased from 28px */
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
