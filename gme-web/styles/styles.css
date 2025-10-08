@@ -1,3 +1,7 @@
+body {
+   font-family: 'Inter', sans-serif;
+}
+
 .wrapper{
     width:100%;
 
@@ -34,8 +38,19 @@ li {
 }
 
 li a {
-    margin-right: 25px;
+  color: white;                 /* Always white text */
+  text-decoration: none;        /* Remove underline */
+  margin-right: 25px;
+  transition: color 0.3s ease;  /* Smooth hover transition */
 }
+
+/* Keep links white even on hover, active, or visited */
+li a:hover,
+li a:active,
+li a:visited {
+  color: white;
+}
+
 
 .logo {
     width: 100px;
@@ -48,7 +63,7 @@ li a {
 
 #heading {
     color: white;
-    width:400px;
+    width:350px;
     margin-top: 50px;
     margin-left: -60px;
     font-weight: bold;
@@ -323,4 +338,48 @@ footer {
   .nav.open .nav__bar:nth-child(1){ transform: translateY(7px) rotate(45deg); }
   .nav.open .nav__bar:nth-child(2){ opacity: 0; }
   .nav.open .nav__bar:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+}
+
+
+#heading2{
+    color: white;
+    width: 400px;
+    font-weight: 100;
+    font-size: 1.5em;
+    margin-left: -60px;
+}
+
+.heading3 {
+    margin-left: 30px;
+}
+
+.btn1 {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: white;
+    border-radius: 10px;
+    border-color: white;
+    color: #000334;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-top:15px; 
+    cursor: pointer;
+}
+
+.home-img {
+    width: 320px;
+    height: 420px;
+    object-fit: cover;
+    margin-left: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.arrow {
+    width:50px;
+    position: absolute;
+    margin-left: 1430px ;
+    margin-top: -60px;
 }
