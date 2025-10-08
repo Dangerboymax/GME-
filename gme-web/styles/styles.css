@@ -1,3 +1,57 @@
-#backgroun-img {
+.wrapper{
+    width:100%;
+
+}
+
+#background-img {
+    
+  background-image: url('/gme-web/images/gme-1.jpg'); /* your background image */
+  background-size: cover;       /* makes image fill the section */
+  background-position: center;  /* centers the image */
+  background-repeat: no-repeat; 
+  padding: 100px 200px;          
+  height: 300px;
+}
+
+.navBar {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: -70px;
+    margin-right: 550px;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+li a {
+    margin-right: 25px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 500px;
+    position: relative;
+    margin-left: -70px;
+    object-fit: cover;
+}
+
+#heading {
+    color: white;
+    width:400px;
+    margin-top: 50px;
+    margin-left: -60px;
+    font-weight: bold;
+    font-size: 2em;
     
 }
