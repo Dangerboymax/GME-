@@ -55,3 +55,11 @@ li a {
     font-size: 2em;
     
 }
+
+#heading2{
+    color: white;
+    width: 400px;
+    font-weight: 100;
+    font-size: 1.5em;
+    margin-left: -60px;
+}
