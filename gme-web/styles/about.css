@@ -225,3 +225,21 @@ footer {
   .nav.open .nav__bar:nth-child(2){ opacity: 0; }
   .nav.open .nav__bar:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
 }
+
+
+header.navdiv {
+  background-color: #1E73BE;     /* GME blue */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  height: 90px;
+  box-sizing: border-box;
+}
+.logo {
+  width: 85px;
+  height: auto;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+}
