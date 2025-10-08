@@ -222,7 +222,7 @@ footer {
   gap: 10px;
 }
 
-.nav__logo{ height: 30px; width: auto; display:block; }
+
 
 /* Links */
 .nav__links{
@@ -261,12 +261,25 @@ footer {
   cursor: pointer;
   padding: 8px;
 }
-.nav__bar{
-  display: block;
-  width: 24px; height: 2px;
-  background: var(--ink);
-  margin: 5px 0;
-  transition: transform .2s ease, opacity .2s ease;
+.navBar {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navBar li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: opacity 0.3s ease;
+}
+
+.navBar li a:hover {
+  opacity: 0.8;
 }
 
 /* Responsive */
@@ -343,4 +356,20 @@ footer {
     position: absolute;
     margin-left: 1430px ;
     margin-top: -60px;
+}
+header.navdiv {
+  background-color: #1E73BE;     /* GME blue */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  height: 90px;
+  box-sizing: border-box;
+}
+.logo {
+  width: 85px;
+  height: auto;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
 }
