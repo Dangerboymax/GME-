@@ -73,235 +73,6 @@ li a:visited {
 }
 
 
-.hero {
-  position: relative;
-  background-image: url('/gme-web/images/Background.jpeg'); 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  text-align: left;
-  padding: 100px 50px;
-  border-radius: 10px;
-  margin: 40px auto;
-  max-width: 1000px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.6); 
-  z-index: 0;
-}
-
-
-.hero h1 {
-  position: relative;
-  z-index: 1;
-  color: #1E73BE; 
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-  line-height: 1.3;
-}
-
-
-.hero p {
-  position: relative;
-  z-index: 1;
-  color: #333333;
-  font-size: 1.2rem;
-  max-width: 600px;
-  line-height: 1.6;
-}
-
-
-.about {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.features {
-  text-align: center;
-  margin: 60px auto;
-  max-width: 1000px;
-}
-
-.features h3 {
-  color: #1e73be;
-  margin-bottom: 30px;
-}
-
-.cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.card {
-  background-color: #f8faff;
-  border: 1px solid #d0e6fa;
-  border-radius: 10px;
-  padding: 20px;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 15px;
-}
-
-.cta {
-  background-color: #1e73be;
-  color: #fff;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  margin-top: 30px;
-}
-
-.cta:hover {
-  background-color: #145a9e;
-}
-
-footer {
-  background-color: #f1f8ff;
-  text-align: center;
-  padding: 15px;
-  color: #555;
-  font-size: 0.9rem;
-  margin-top: 60px;
-}
-/* Brand colors */
-:root{
-  --brand-blue: #1E73BE;   /* primary */
-  --brand-blue-dark:#145A9E;
-  --ink:#0A2239;
-  --bg:#ffffff;
-}
-
-/* Header container */
-.site-header{
-  position: sticky; top: 0; z-index: 1000;
-  background: var(--bg);
-  box-shadow: 0 4px 16px rgba(0,0,0,.06);
-}
-
-/* Nav layout */
-.nav{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 14px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-/* Brand (text or image) */
-.nav__brand{
-  font: 700 1.3rem/1 "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--brand-blue);
-  text-decoration: none;
-  letter-spacing: .3px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.nav__logo{ height: 30px; width: auto; display:block; }
-
-/* Links */
-.nav__links{
-  list-style: none;
-  display: flex;
-  gap: 26px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav__links a{
-  text-decoration: none;
-  color: var(--ink);
-  font-weight: 600;
-  padding: 8px 2px;
-  border-bottom: 2px solid transparent;
-  transition: color .2s ease, border-color .2s ease;
-}
-
-.nav__links a:hover{
-  color: var(--brand-blue);
-  border-color: rgba(30,115,190,.25);
-}
-
-.nav__links a.active,
-.nav__links a[aria-current="page"]{
-  color: var(--brand-blue);
-  border-color: var(--brand-blue);
-}
-
-/* Mobile toggle (hamburger) */
-.nav__toggle{
-  display: none; /* hidden on desktop */
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  padding: 8px;
-}
-.nav__bar{
-  display: block;
-  width: 24px; height: 2px;
-  background: var(--ink);
-  margin: 5px 0;
-  transition: transform .2s ease, opacity .2s ease;
-}
-
-/* Responsive */
-@media (max-width: 840px){
-  .nav{
-    padding: 12px 16px;
-  }
-  .nav__toggle{ display: inline-block; }
-  .nav__links{
-    position: absolute;
-    right: 16px; left: 16px;
-    top: calc(100% + 8px);
-    background: var(--bg);
-    border: 1px solid #e8eef7;
-    border-radius: 10px;
-    box-shadow: 0 10px 24px rgba(0,0,0,.08);
-    flex-direction: column;
-    padding: 10px;
-    gap: 8px;
-    transform: translateY(-8px);
-    opacity: 0; pointer-events: none;
-    transition: opacity .2s ease, transform .2s ease;
-  }
-  .nav__links a{ padding: 10px 8px; }
-  .nav.open .nav__links{
-    transform: translateY(0);
-    opacity: 1; pointer-events: auto;
-  }
-  /* animate hamburger to X when open */
-  .nav.open .nav__bar:nth-child(1){ transform: translateY(7px) rotate(45deg); }
-  .nav.open .nav__bar:nth-child(2){ opacity: 0; }
-  .nav.open .nav__bar:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
-}
-
-
 #heading2{
     color: white;
     width: 400px;
@@ -310,37 +81,109 @@ footer {
     margin-left: -60px;
 }
 
+/* Heading styling */
 .heading3 {
-    margin-left: 30px;
+  margin-left: 30px;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #000334;
+  margin-bottom: 20px;
 }
 
-.btn1 {
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background-color: white;
-    border-radius: 10px;
-    border-color: white;
-    color: #000334;
-    font-weight: bold;
-    font-size: 0.9em;
-    margin-top:15px; 
-    cursor: pointer;
+/* Product gallery container */
+.product-gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 40px;
+  padding: 0 30px 20px;
+  scroll-behavior: smooth;
 }
 
+/* Hide scrollbar for cleaner look */
+.product-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each product card */
+.product-card {
+  flex: 0 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Product image */
 .home-img {
-    width: 320px;
-    height: 420px;
-    object-fit: cover;
-    margin-left: 30px;
-    border-radius: 10px;
-    margin-top: 10px;
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 0;
 }
 
+/* Arrow styling */
 .arrow {
-    width:50px;
-    position: absolute;
-    margin-left: 1430px ;
-    margin-top: -60px;
+  width: 40px;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: transform 0.2s ease;
+  position: absolute;
+  top: 530px;
+  margin-left: 1400px;
+}
+
+.arrow:hover {
+  transform: translateX(5px);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .product-gallery {
+    gap: 10px;
+    padding: 0 15px;
+  }
+
+  .home-img {
+    width: 200px;
+    height: 280px;
+  }
+
+  .heading3 {
+    font-size: 1.5em;
+  }
+}
+
+.explore-btn {
+  background-color: white;
+  color: #000334;               /* dark navy text color */
+  border: 2px solid white;
+  padding: 14px 36px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;        /* if used on <a> tags */
+}
+
+/* Hover effect */
+.explore-btn:hover {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Optional: make sure button looks centered and neat */
+.explore-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
