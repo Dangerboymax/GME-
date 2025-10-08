@@ -23,6 +23,7 @@ body {
     font-size: 1.5em;
     margin-top: -70px;
     margin-right: 550px;
+
 }
 
 .navdiv {
@@ -57,7 +58,7 @@ li a:visited {
     height: 100px;
     border-radius: 500px;
     position: relative;
-    margin-left: -70px;
+    margin-left: -100px;
     object-fit: cover;
 }
 
@@ -70,47 +71,7 @@ li a:visited {
     font-size: 2em;
     
 }
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  color: #0a2239;
-  background-color: #ffffff;
-}
 
-header {
-  background: linear-gradient(to bottom, #dbefff, #ffffff);
-  text-align: center;
-  padding-bottom: 40px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #1e73be;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #0a2239;
-  font-weight: 500;
-}
-
-.nav-links a:hover {
-  color: #1e73be;
-}
 
 .hero {
   position: relative;
