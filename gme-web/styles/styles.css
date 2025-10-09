@@ -100,7 +100,7 @@ body {
 
 /* Arrow styling */
 .arrow {
-    width:50px;
+    width:30px;
     position: absolute;
     margin-left: 1430px ;
     margin-top: -80px;
@@ -211,5 +211,140 @@ footer {
 footer p {
   margin: 0;
   color: #555;
+}
+
+@media (max-width: 1024px) {
+  #background-img {
+    padding: 80px 100px;
+    height: 180px;
+  }
+
+  .heading3 {
+    margin-left: 200px;
+    font-size: 1.5em;
+  }
+
+  .home-img {
+    width: 250px;
+    height: 320px;
+  }
+
+  .arrow {
+    margin-left: 900px;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  #background-img {
+    padding: 60px 40px;
+    height: 150px;
+    text-align: center;
+  }
+
+  .logo {
+    margin-left: 0;
+    width: 80px;
+    height: 80px;
+  }
+
+  #heading, #heading2 {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .heading3 {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.4em;
+  }
+
+  .product-gallery {
+    margin-left: 0;
+    gap: 20px;
+    padding: 0 10px 20px;
+  }
+
+  .home-img {
+    width: 200px;
+    height: 280px;
+  }
+
+  .arrow {
+    display: none; /* hide arrows on mobile */
+  }
+
+  .gme-navbar.left {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+    margin: 0;
+    gap: 20px;
+  }
+
+  .gme-nav__links {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Small mobile (≤ 480px) */
+@media (max-width: 480px) {
+  #background-img {
+    padding: 40px 20px;
+    height: 120px;
+  }
+
+  .home-img {
+    width: 150px;
+    height: 220px;
+  }
+
+  .explore-btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .gme-brand img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #heading,
+  #heading2 {
+    width: 80%;          /* shrink width */
+    margin-left: 20px;   /* no more big negatives */
+  }
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  #heading,
+  #heading2 {
+    width: 100%;         /* full width */
+    max-width: 90%;      /* prevent overflow */
+    margin: 0 auto;      /* center horizontally */
+    text-align: center;  /* center text */
+    font-size: 1.4em;    /* smaller heading */
+  }
+
+  #heading2 {
+    font-size: 1em;      /* smaller subheading */
+    margin-bottom: 20px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  #heading {
+    font-size: 1.2em;
+  }
+
+  #heading2 {
+    font-size: 0.9em;
+  }
 }
 
