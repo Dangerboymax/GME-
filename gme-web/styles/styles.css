@@ -1,6 +1,10 @@
 body {
-   font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
+  background: #e4f0fb; /* GME’s soft blue background */
+  color: var(--ink);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
+
 
 .wrapper{
     width:100%;
