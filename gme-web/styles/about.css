@@ -1,3 +1,7 @@
+body {
+   font-family: 'Inter', sans-serif;
+}
+
 .hero {
   position: relative;
   background-image: url('/gme-web/images/Background.jpeg'); 
