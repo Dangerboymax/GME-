@@ -298,11 +298,36 @@ header.navdiv {
   text-decoration: underline;
 }
 
-/* FOOTER */
-.footer {
+/* ===== CLEAN MINIMAL FOOTER ===== */
+footer {
+  background-color: #ffffff;              /* pure white background */
+  color: #333333;                         /* dark grey text */
   text-align: center;
   padding: 20px 0;
-  color: #6b7a90;
-  font-size: 0.95rem;
-  margin-top: 30px;
+  font-size: 14px;
+  border-top: 1px solid #e5e5e5;          /* subtle top border */
+  margin-top: 60px;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Optional: soft shadow for separation */
+footer {
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+}
+
+footer p {
+  margin: 0;
+  color: #555555;                         /* slightly softer tone */
+  letter-spacing: 0.3px;
+}
+
+footer a {
+  color: #1b5eb7;                         /* GME brand blue */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #0b3e8a;                         /* darker hover color */
+  text-decoration: underline;
 }
