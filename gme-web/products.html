@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | GME</title>
-
-
-  <link rel="stylesheet" href="styles/about.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Products | GME Cleaning Solutions</title>
+  <link rel="stylesheet" href="./styles/products.css" />
 </head>
 
 <body>
-  <header class="gme-navbar left">
+  <!-- ===== NAVIGATION BAR ===== -->
+ <header class="gme-navbar left">
   <a href="index.html" class="gme-brand">
     <img src="/gme-web/images/gme-logo.png" alt="GME Logo">
   </a>
@@ -19,30 +18,79 @@
     <ul class="gme-nav__links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="products.html"aria-current="page">Products</a></li>
+      <li><a href="products.html" aria-current="page">Products</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
-<body>
-    <div>
-        <nav>
-            <img>
-            <ul>
-                <li><a>Home</a></li>
-                <li><a>About</a></li>
-                <li><a>Products</a></li>
-                <li><a>Contact</a></li>
-            </ul>
-        </nav>
 
-        <main>
-
-        </main>
-
-        <footer>
-
-        </footer>
+  <!-- ===== HERO SECTION ===== -->
+  <section class="products-hero">
+    <div class="hero-card">
+      <div class="hero-left">
+        <h1>Our Products</h1>
+        <p>Buy in bulk, contact us</p>
+      </div>
+      <div class="hero-right">
+        <img src="images/product-4.jpg" alt="Product Banner" />
+      </div>
     </div>
+  </section>
+
+  <!-- ===== PRODUCTS GRID ===== -->
+  <section class="products-section">
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="images/product-1.jpg" alt="Stay Soft">
+        <div class="product-info">
+          <h3>Stay Soft</h3>
+          <p>Gentle fabric softener for lasting freshness.</p>
+          <p class="price">R25</p>
+          <a href="contact.html" class="cta-btn">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product-3.jpg" alt="Dishwashing Liquid">
+        <div class="product-info">
+          <h3>Dishwashing Liquid</h3>
+          <p>1.5 Litre — tough on grease, gentle on skin.</p>
+          <p class="price">R25</p>
+          <a href="contact.html" class="cta-btn">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product-2.jpg" alt="Pine Gel">
+        <div class="product-info">
+          <h3>Pine Gel</h3>
+          <p>Multi-purpose cleaner with a fresh pine scent.</p>
+          <p class="price">R25</p>
+          <a href="contact.html" class="cta-btn">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/bleach.jpg" alt="Thick Bleach">
+        <div class="product-info">
+          <h3>Thick Bleach</h3>
+          <p>Powerful stain remover and disinfectant.</p>
+          <p class="price">R25</p>
+          <a href="contact.html" class="cta-btn">Contact Us</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© <span id="year"></span> GME Cleaning Solutions. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
