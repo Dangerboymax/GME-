@@ -148,7 +148,7 @@ header.navdiv {
   display: grid;
   grid-template-columns: 1.6fr 0.9fr;
   gap: 30px;
-  max-width: 1100px;
+  max-width: 1080px;
   margin: 30px auto;
   background: #fff;
   border-radius: 16px;
@@ -211,7 +211,6 @@ header.navdiv {
   padding: 20px;
   height: fit-content;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-  margin-top: 50px;
 }
 
 .contact-card h3 {
@@ -299,36 +298,11 @@ header.navdiv {
   text-decoration: underline;
 }
 
-/* ===== CLEAN MINIMAL FOOTER ===== */
 footer {
-  background-color: #ffffff;              /* pure white background */
-  color: #333333;                         /* dark grey text */
+  background-color: #f1f8ff;
   text-align: center;
-  padding: 20px 0;
-  font-size: 14px;
-  border-top: 1px solid #e5e5e5;          /* subtle top border */
+  padding: 15px;
+  color: #555;
+  font-size: 0.9rem;
   margin-top: 60px;
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-}
-
-/* Optional: soft shadow for separation */
-footer {
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
-}
-
-footer p {
-  margin: 0;
-  color: #555555;                         /* slightly softer tone */
-  letter-spacing: 0.3px;
-}
-
-footer a {
-  color: #1b5eb7;                         /* GME brand blue */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #0b3e8a;                         /* darker hover color */
-  text-decoration: underline;
 }
