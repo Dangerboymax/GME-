@@ -2,11 +2,11 @@
    Base / Page background
 --------------------------- */
 :root{
-  --gme-blue: #1E73BE;
-  --ink: #1f2d3d;
+  --gme-blue: #2C64C5;       /* color sampled from your GME logo */
+  --ink: #1a2a3b;
   --bg: #ffffff;
-  --soft-blue: #eaf3ff;     /* very light hero bg */
-  --page-blue: #e9f3ff;     /* page background */
+  --soft-blue: #f4f8ff;
+  --page-blue: #f2f6fb;
 }
 
 *{ box-sizing: border-box; }
@@ -23,69 +23,84 @@ body{
   line-height: 1.5;
 }
 
-/* --------------------------
-   Navbar (remove.bg style)
---------------------------- */
-.gme-navbar.left{
+header.navdiv {
+  background-color: #1E73BE;     /* GME blue */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  height: 90px;
+  box-sizing: border-box;
+}
+
+/* ===== remove.bg–style navbar ===== */
+/* Clean white navbar aligned left */
+.gme-navbar.left {
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 72px;
+  background: #ffffff;
+  height: 70px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;   /* logo + links to the left */
-  gap: 48px;
-  padding: 0 48px;
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  justify-content: flex-start; /* everything on left */
+  gap: 40px; /* spacing between logo and links */
+  padding: 0 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  gap: 50px; /* adds breathing space between logo and links */
+  padding: 0 50px;
 }
 
-.gme-brand img{
-  height: 40px;
+/* Logo styling */
+.gme-brand img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+/* Navigation links */
+.gme-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.gme-nav__links a {
+  position: relative;
+  text-decoration: none;
+  color: #1f2d3d; /* dark text */
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px; /* rounded hover background */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect: background + text color */
+.gme-nav__links a:hover {
+  color: #1E73BE; /* GME blue text */
+  background-color: rgba(30, 115, 190, 0.1); /* soft blue background */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(30, 115, 190, 0.15);
+}
+
+
+/* Active page: only blue text, no background */
+.gme-nav__links a[aria-current="page"] {
+  color: #1E73BE;
+  background: none;
+}
+.gme-brand img {
+  height: 40px;     /* increased from 28px */
   width: auto;
   display: block;
   object-fit: contain;
 }
 
-.gme-nav__links{
-  display: flex;
-  align-items: center;
-  gap: 34px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.gme-nav__links a{
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  color: var(--ink);
-  font-weight: 700;
-  padding: 10px 18px;
-  border-radius: 999px;                    /* rounded pill */
-  transition: color .25s ease, background-color .25s ease, transform .15s ease, box-shadow .25s ease, border-color .2s ease;
-}
-
-/* Hover: soft blue pill + white border */
-.gme-nav__links a:hover{
-  color: var(--gme-blue);
-  background: rgba(30,115,190,.12);
-  border: 2px solid #fff;                  /* white outline */
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(30,115,190,.15);
-}
-
-/* Active (current page): blue text only, NO background bubble */
-.gme-nav__links a[aria-current="page"]{
-  color: var(--gme-blue);
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-}
 
 /* --------------------------
-   Hero
+   Hero section
 --------------------------- */
 .products-hero{
   padding: 28px 20px 10px;
@@ -96,7 +111,7 @@ body{
   margin: 0 auto;
   background: var(--bg);
   border-radius: 18px;
-  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  box-shadow: 0 6px 16px rgba(0,0,0,.05);
   overflow: hidden;
   display: grid;
   grid-template-columns: 1.1fr .9fr;
@@ -111,12 +126,14 @@ body{
 .hero-left h1{
   margin: 0 0 8px;
   font-size: 34px;
+  color: var(--gme-blue);
   line-height: 1.2;
 }
 
 .hero-left p{
   margin: 0;
   color: #4b5b6d;
+  font-size: 16px;
 }
 
 .hero-right{
@@ -144,7 +161,7 @@ body{
   max-width: 1220px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));  /* 4-per-row */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 26px;
 }
 
@@ -152,7 +169,7 @@ body{
 .product-card{
   background: #fff;
   border-radius: 18px;
-  box-shadow: 0 4px 14px rgba(0,0,0,.07);
+  box-shadow: 0 4px 14px rgba(44,100,197,0.08);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -161,7 +178,7 @@ body{
 
 .product-card:hover{
   transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0,0,0,.1);
+  box-shadow: 0 10px 24px rgba(44,100,197,0.15);
 }
 
 .product-card img{
@@ -178,6 +195,7 @@ body{
 .product-info h3{
   margin: 0 0 6px;
   font-size: 20px;
+  color: var(--ink);
 }
 
 .product-info p{
@@ -191,12 +209,14 @@ body{
   margin-bottom: 12px;
 }
 
-/* CTA button */
-.cta-btn{
+
+/* Call-to-action button */
+.cta-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+
   text-decoration: none;
   background: var(--gme-blue);
   color: #fff;
@@ -204,13 +224,23 @@ body{
   padding: 12px 18px;
   border-radius: 12px;
   font-weight: 700;
-  transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+
+  box-shadow: 0 2px 10px rgba(30, 115, 190, 0.18);
+  transition: all 0.3s ease;
 }
 
+.cta-btn:hover {
+  background: #fff;
+  color: var(--gme-blue);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(30, 115, 190, 0.25);
+}
+
+
 .cta-btn:hover{
-  background: #155da0;
-  border-color: #155da0;
-  box-shadow: 0 8px 20px rgba(30,115,190,.25);
+  background: #1f4ca3;
+  border-color: #1f4ca3;
+  box-shadow: 0 8px 20px rgba(44,100,197,.25);
   transform: translateY(-1px);
 }
 
@@ -230,41 +260,50 @@ footer{
    Responsive
 --------------------------- */
 @media (max-width: 1200px){
-  .product-grid{
-    grid-template-columns: repeat(3, minmax(0, 1fr));  /* 3-per-row */
-  }
+  .product-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 900px){
-  .hero-card{
-    grid-template-columns: 1fr;
-  }
-  .hero-right img{
-    max-height: 260px;
-  }
+  .hero-card{ grid-template-columns: 1fr; }
+  .hero-right img{ max-height: 260px; }
 }
 
 @media (max-width: 820px){
-  .product-grid{
-    grid-template-columns: repeat(2, minmax(0, 1fr));  /* 2-per-row */
-  }
+  .product-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .gme-navbar.left{
     gap: 22px;
     padding: 0 18px;
   }
-  .gme-nav__links{
-    gap: 18px;
-  }
+  .gme-nav__links{ gap: 18px; }
 }
 
 @media (max-width: 520px){
-  .product-grid{
-    grid-template-columns: 1fr;               /* 1-per-row */
-  }
-  .hero-left h1{
-    font-size: 28px;
-  }
-  .hero-right img{
-    max-height: 220px;
-  }
+  .product-grid{ grid-template-columns: 1fr; }
+  .hero-left h1{ font-size: 28px; }
+  .hero-right img{ max-height: 220px; }
+}
+
+/* --------------------------
+   Products Heading Section
+--------------------------- */
+.products-heading{
+  background: var(--soft-blue);
+  text-align: center;
+  padding: 30px 0 20px;
+  border-radius: 14px;
+  margin: 20px auto 30px;
+  box-shadow: 0 4px 10px rgba(44,100,197,0.08);
+}
+
+.products-heading h2{
+  color: var(--gme-blue);
+  font-size: 32px;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.products-heading p{
+  color: #4b5b6d;
+  margin: 0;
+  font-size: 16px;
 }
