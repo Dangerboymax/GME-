@@ -258,8 +258,8 @@ footer p {
 
   .logo {
     margin-left: 0;
-    width: 80px;
-    height: 80px;
+    width: 30px;
+    height: 30px;
   }
 
   #heading, #heading2 {
@@ -284,22 +284,24 @@ footer p {
   }
 
   .product-card {
-    min-width: 200px;
+    min-width: 100px;
   }
 
   .home-img {
-    width: 200px;
-    height: 280px;
+    width: 100px;
+    height: 180px;
   }
 
   .gme-navbar.left {
     flex-wrap: nowrap; /* keep horizontal */
-    padding: 0 10px;
+    height: 64px;
+    padding: 0 18px;
+    gap: 16px;
   }
 
   .gme-nav__links {
     flex-wrap: nowrap;
-    gap: 10px;
+    gap: 0px;
   }
 }
 
