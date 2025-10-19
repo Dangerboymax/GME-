@@ -306,3 +306,151 @@ footer{
   font-size: 14px;
   color: #555;
 }
+
+/* ===========================
+   CONTACT PAGE – RESPONSIVE
+   =========================== */
+
+/* Base improvements (safe to keep even if already present) */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr; /* form | sidebar */
+  gap: 24px;
+  align-items: start;
+}
+
+.contact-card,
+.contact-aside {
+  background: #fff;
+  border: 1px solid #e8eef7;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(12, 60, 130, 0.06);
+  padding: 24px;
+}
+
+.contact-card h2,
+.contact-aside h3 {
+  margin: 0 0 14px;
+  font-weight: 700;
+  color: #123764;           /* deep ink that matches your theme */
+}
+
+.contact-actions a,
+.contact-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Google Form / Map embeds */
+.contact-card iframe,
+.map-embed iframe {
+  width: 100%;
+  min-height: 440px;
+  border: 0;
+  border-radius: 12px;
+}
+
+/* ----------  ≥ 1200px (large desktops) ---------- */
+@media (min-width: 1200px) {
+  .contact-grid {
+    grid-template-columns: 2fr 1fr;       /* a bit more room to the form */
+    gap: 28px;
+  }
+  .contact-card iframe { min-height: 520px; }
+}
+
+/* ----------  ≤ 1024px (laptops / tablets landscape) ---------- */
+@media (max-width: 1024px) {
+  header.gme-navbar.left {
+    padding: 0 28px;
+    gap: 32px;
+  }
+  .contact-grid {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+  }
+  .contact-card,
+  .contact-aside { padding: 20px; }
+  .contact-card iframe { min-height: 420px; }
+}
+
+/* ----------  ≤ 768px (tablets / large phones) ---------- */
+@media (max-width: 768px) {
+  /* stack the layout */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  /* make boxes a touch larger for fingers */
+  .contact-card,
+  .contact-aside {
+    padding: 18px;
+    border-radius: 14px;
+  }
+  .contact-card h2 { font-size: 1.35rem; }
+  .contact-aside h3 { font-size: 1.05rem; }
+  .contact-card iframe,
+  .map-embed iframe { min-height: 400px; }
+
+  /* condensed rows inside the sidebar */
+  .contact-aside .row,
+  .contact-aside li {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  .contact-aside .row svg,
+  .contact-aside .row img { width: 22px; height: 22px; }
+}
+
+/* ----------  ≤ 600px (standard phones) ---------- */
+@media (max-width: 600px) {
+  /* brand + links spacing */
+  header.gme-navbar.left {
+    height: 64px;
+    padding: 0 18px;
+    gap: 16px;
+  }
+  .gme-brand img { height: 30px; }
+
+  .gme-nav__links { gap: 10px; }
+  .gme-nav__links a { padding: 8px 12px; border-radius: 16px; }
+
+  /* page paddings */
+  .container,
+  main,
+  .contact-wrap { padding: 0 14px; }
+
+  .contact-card iframe,
+  .map-embed iframe { min-height: 360px; }
+
+  .contact-actions a,
+  .contact-actions button {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ----------  ≤ 420px (small phones) ---------- */
+@media (max-width: 420px) {
+  .contact-card,
+  .contact-aside { padding: 14px; border-radius: 12px; }
+
+  .contact-card h2 { font-size: 1.2rem; }
+  .contact-aside h3 { font-size: 1rem; }
+
+  .contact-card iframe,
+  .map-embed iframe { min-height: 320px; }
+
+  .contact-aside .row,
+  .contact-aside li { grid-template-columns: 24px 1fr; gap: 8px; }
+}
